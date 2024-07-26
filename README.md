@@ -1,9 +1,11 @@
 # CaseLab-FileTransfer
 
 Инструкция по запуску:
+
  docker-compose build
  
  docker-compose up
+ 
 
 API: 
   localhost:8080/api/v1/json/createFile - Принимает на вход JSON с аттрибутами data, title, creation_date, description. На выходе отправляется long
