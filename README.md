@@ -18,5 +18,6 @@ API:
   localhost:8080/api/v1/json/getAllFiles?sort=x (где x - вариант упорядочивания. ASC - по возрастанию, DESC - по убыванию, любой отличающийся от asc и desc - без сортировки) (работает независимо от регистра). На выходе возвращается список всех файлов в порядке сортировки
 
 Тесты: src/test/java/com/preinternship/caselabrosatom
+
         src/test/java/resources - свойства для H2
 
