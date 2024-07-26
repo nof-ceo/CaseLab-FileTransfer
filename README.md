@@ -19,5 +19,5 @@ API:
 
 Тесты: src/test/java/com/preinternship/caselabrosatom
 
-        src/test/java/resources - свойства для H2
+src/test/java/resources - свойства для H2
 
