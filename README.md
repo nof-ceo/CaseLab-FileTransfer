@@ -36,7 +36,10 @@ PostgreSQL СУБД, Spring WEB, Data, H2, PostgreSQL JDBC
 /getAllFiles возвращает все созданные файлы в порядке сортировки, в случае отсутствия файлов возвращает ошибку FileNotFoundException
 
 Примеры тестовых запросов: 
-JSON
+localhost:8080/api/v1/json/createFile
+
+
+JSON:
 
         {
           "data" : "none",
@@ -46,7 +49,47 @@ JSON
         }
 
 Вывод: id
-localhost:8080/api/v1/json/createFile
+
+
+localhost:8080/api/v1/json/getFile?id=(id с предыдущего метода createFile)
+
+Вывод:
+
+        {
+          "data" : "none",
+          "title": "titleeee",
+          "creation_date": "13-01-2017 16:34:41",
+          "description": "hihhahai"
+        }
+
+
+localhost:8080/api/v1/json/getFile
+
+JSON:
+
+    {
+      "id": "id с метода createFile"
+    }
+
+Вывод:
+
+        {
+          "data" : "none",
+          "title": "titleeee",
+          "creation_date": "13-01-2017 16:34:41",
+          "description": "hihhahai"
+        }
+
+
+localhost:8080/api/v1/json/getAllFiles
+
+Вывод: все созданные файлы
+
+
+
+
+
+
 
 
 
