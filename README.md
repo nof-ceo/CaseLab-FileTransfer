@@ -1,7 +1,6 @@
 # CaseLab-FileTransfer
 
 Инструкция по запуску:
- cd CaseLab-FileTransfer
  docker-compose build
  docker-compose up
 
