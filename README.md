@@ -20,7 +20,36 @@ API:
 
   localhost:8080/api/v1/json/getAllFiles?sort=x (где x - вариант упорядочивания. ASC - по возрастанию, DESC - по убыванию, любой отличающийся от asc и desc - без сортировки) (работает независимо от регистра). На выходе возвращается список всех файлов в порядке сортировки
 
+(Добавлены кастомные ошибки. Например при попытке получить файл с несуществующим id)
+
+
 Тесты: src/test/java/com/preinternship/caselabrosatom
 
 src/test/java/resources - свойства для H2
+
+
+Описание решения:
+PostgreSQL СУБД, Spring WEB, Data, H2, PostgreSQL JDBC
+
+На вход /createFile отправляется dto, которое сохраняется в базе данных. /getFile возвращает JSON с аттрибутами файла, в случае отсутствия файла с таким id вернётся ошибка FileNotFoundException
+
+/getAllFiles возвращает все созданные файлы в порядке сортировки, в случае отсутствия файлов возвращает ошибку FileNotFoundException
+
+Примеры тестовых запросов: 
+JSON
+
+        {
+          "data" : "none",
+          "title": "titleeee",
+          "creation_date": "13-01-2017 16:34:41",
+          "description": "hihhahai"
+        }
+
+Вывод: id
+localhost:8080/api/v1/json/createFile
+
+
+
+
+
 
